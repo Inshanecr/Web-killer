@@ -1,4 +1,4 @@
-requirements 
+ 
 pip install requests 
 pip install ipapi
 pip install random 
