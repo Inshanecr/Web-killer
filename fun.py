@@ -11,22 +11,22 @@ from phonenumbers import geocoder, parse
 from datetime import datetime
 from itertools import count
 from string import ascii_lowercase as l, ascii_uppercase as u, digits as d, punctuation as p
-
+from os import system
 all = l + u + d + p
-    
+#installing
+print(Fore.RED+"INSTSLLING  DOCUMENT\n\n\n\n\n\n\n ")
+system(Fore.CYAN+"pip install requests")  
+system("pip install phonenumbers")  
+system("pip install ipapi")  
+system("pip install colorama") 
+system("pip install itertools")  
+system("pip install datetime")
 
 class Style:
     UNDERLINE = '\033[4m'
     BOLD = '\033[1m'
     END = '\033[0m'
     CYAN = '\033[96m'
-
-# print(f"\ndate : {datetime.now()}")
-# print(Fore.RED + "[1] " + Fore.GREEN + "Show your ip [ Use vpn ]")
-# print(Fore.RED +"[2] " + Fore.GREEN + "Password cracker")
-# print(Fore.RED + "[3] " + Fore.YELLOW + "Show your Area Number: ")
-# print(Fore.RED + "[4] " + Fore.YELLOW + "Calculate number")
-# print(Fore.RED + "[5] " + Fore.GREEN + "Fun")
 
 ok = True
 while True:
@@ -70,16 +70,16 @@ admin-cgi
             for i in list:   
                  http = get(url+"/"+i)
                  if http.status_code == 200:
-                     print (Fore.GREEN+"[+]"+url+"/"+i)
+                     print (Fore.GREEN+"[+] "+url+"/"+i)
                  else:
-                     print (Fore.RED+"[!]"+url+"/"+i)
+                     print (Fore.RED+"[!] "+url+"/"+i)
         elif a == "2":
             ip = get("https://api.ipify.org").text
             print('\n' + Fore.MAGENTA + ip + Fore.RESET)
             http = get("https://api.ipify.org").text
             cou = location(http)["country"]
             if cou == "IR":
-                print(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + Style.BOLD + "BLOCKED" + Style.END + " from server  " + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Iranian"+ Fore.WHITE +" IP " + Style.UNDERLINE + Fore.GREEN + cou + Style.END + Fore.RESET)
+                print(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + Style.BOLD + "BLOCKED" + Style.END + " from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " + Style.UNDERLINE + Fore.GREEN + cou +"\n\n\n\n"+ Style.END + Fore.RESET)
                 
         elif a == "3":
             try:
@@ -97,22 +97,32 @@ admin-cgi
                 print(Fore.GREEN + "Your pass is: " + Fore.YELLOW + "|--> "+ Style.UNDERLINE + password + Style.END + " <--|" + Fore.GREEN)
             pass
         elif a == "4":
-            numbers = input("Enter Number\t \nWith code area(+98):")
+            numbers = input(Fore.LIGHTGREEN_EX+"Enter Number\t \nWith code area(+98):\n")
+            print(Fore.LIGHTYELLOW_EX+"this number countary name is ")
             ph_number = parse(numbers)
             print(geocoder.description_for_number(ph_number,"fa"))
+            print("\n\n\n")
         elif a == "5":
             print("""------------------------T.me/LooQaat--------------------""")
             num_1 = int(input("Send first number to calc: "))
             num_2 = int(input("Send second number to calc: "))
-            action = input("Which one: * + / - : ")
+            action = input(Fore.CYAN+"Which one: * + / - : ")
             if action == "+":
+                print(Fore.LIGHTYELLOW_EX+"Your answers : ")
                 print(num_1 + num_2)
+                print("\n\n")
             elif action == "-":
-                print(num_1 - num_2)
+                print(Fore.YELLOW+"Your answers : ")
+                print(+num_1 - num_2)
+                print("\n\n")
             elif action == "*":
+                print(Fore.YELLOW+"Your answers : ")
                 print(num_1 * num_2)
+                print("\n\n")
             elif action == "/":
+                print(Fore.YELLOW+"Your answers : \n")
                 print(num_1 / num_2)
+                print("\n\n")
     except KeyboardInterrupt:
         print("",flush=True)
         print("GoodBye!",flush=True)
