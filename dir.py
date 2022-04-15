@@ -12,6 +12,7 @@ from datetime import datetime
 from itertools import count
 from string import ascii_lowercase as l, ascii_uppercase as u, digits as d, punctuation as p
 from os import system
+from directories import directorylist
 all = l + u + d + p
 #installing
 print(Fore.RED+"INSTSLLING  DOCUMENT\n\n\n\n\n\n\n ")
@@ -54,13 +55,14 @@ while True:
           try:
            print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
            inp = "https://"+input(Fore.GREEN+"Enter the URL"+Fore.LIGHTRED_EX+" [with out https://] :\n")+'/'
-           with open('directories.txt','r') as foo:
-                for i in foo:
-                   h = get(inp+i)
-                   if h.status_code == 200:
-                       print(Fore.GREEN+"[+]"+inp+i)
-                   else:
-                       print (Fore.RED+"[!] "+inp+i)
+           data = directorylist
+           for i in data: 
+              h = get(inp+i)
+              if h.status_code == 200:
+                 print(Fore.GREEN+"[ + ]"+inp+i)
+              else:
+                 print (Fore.RED+"[!] "+inp+i)
+
           except KeyboardInterrupt:
                  exit(Fore.CYAN+"\nGoodBye")
         elif a == "2":
@@ -86,12 +88,12 @@ while True:
                 # and try again
             elif ok == True:
                 password = "".join(sample(all,length))
-                print(Fore.GREEN + "Your pass is: " + Fore.YELLOW + "|--> "+ Style.UNDERLINE + password + Style.END + " <--|" + Fore.GREEN)
+                print(Fore.GREEN + "\n\n\nYour pass is: " + Fore.YELLOW + "|--> " +Fore.CYAN+password + Fore.YELLOW + " <--|\n\n\n\n\n" + Fore.GREEN)
             pass
         elif a == "4":
             print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
             numbers = input(Fore.LIGHTGREEN_EX+"Enter Number\t \nWith code area(+98):\n")
-            print(Fore.LIGHTYELLOW_EX+"this number countary name is ")
+            print(Fore.LIGHTYELLOW_EX+"this number country name is ")
             ph_number = parse(numbers)
             print(geocoder.description_for_number(ph_number,"fa"))
             print("\n\n\n")
@@ -99,23 +101,25 @@ while True:
             print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
             num_1 = int(input("Send first number to calc: "))
             num_2 = int(input("Send second number to calc: "))
-            action = input(Fore.CYAN+"Which one: * + / - : ")
+            action = input(Fore.GREEN+"Which one:"+Fore.CYAN+" *  +  /  - : ")
             if action == "+":
-                print(Fore.LIGHTYELLOW_EX+"Your answers : ")
+                print(Fore.LIGHTYELLOW_EX+"\n\nYour answer : ")
                 print(num_1 + num_2)
                 print("\n\n")
             elif action == "-":
-                print(Fore.YELLOW+"Your answers : ")
-                print(+num_1 - num_2)
+                print(Fore.YELLOW+"\n\nYour answer : ")
+                print(num_1 - num_2)
                 print("\n\n")
             elif action == "*":
-                print(Fore.YELLOW+"Your answers : ")
+                print(Fore.YELLOW+"\n\nYour answer : ")
                 print(num_1 * num_2)
                 print("\n\n")
             elif action == "/":
-                print(Fore.YELLOW+"Your answers : \n")
+                print(Fore.YELLOW+"\n\nYour answer :")
                 print(num_1 / num_2)
                 print("\n\n")
+    except ZeroDivisionError:
+        print(Fore.RED+"You can't division by zero ".upper())
     except KeyboardInterrupt:
         print("",flush=True)
         print("GoodBye!",flush=True)
