@@ -1,2 +1,2 @@
 
-Get ip&search in directory &Check your Area Number 
+search in directory & check your bitcoin wallet
