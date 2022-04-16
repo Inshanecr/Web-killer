@@ -3,6 +3,21 @@
 #AUTHR T.me/HASHIVATOR
 #Bug fixes and complements
 #‐-----------------T.me/HASHIVATOR
+
+
+#installing
+from os import system
+print("INSTSLLING  DOCUMENT\n\n\n\n\n\n\n ")
+system("pip install requests")  
+system("pip install phonenumbers")  
+system("pip install ipapi")  
+system("pip install colorama") 
+system("pip install itertools")  
+system("pip install datetime")
+system("clear")
+#libary
+
+
 from requests import get
 from ipapi import location
 from random import sample
@@ -11,18 +26,8 @@ from phonenumbers import geocoder, parse
 from datetime import datetime
 from itertools import count
 from string import ascii_lowercase as l, ascii_uppercase as u, digits as d, punctuation as p
-from os import system
 from directories import directorylist
 all = l + u + d + p
-#installing
-print(Fore.RED+"INSTSLLING  DOCUMENT\n\n\n\n\n\n\n ")
-system(Fore.CYAN+"pip install requests")  
-system("pip install phonenumbers")  
-system("pip install ipapi")  
-system("pip install colorama") 
-system("pip install itertools")  
-system("pip install datetime")
-system("clear")
 
 class Style:
     UNDERLINE = '\033[4m'
@@ -40,10 +45,10 @@ while True:
 | |_| | / _ \ \___ \| |_| || | \ \ / / _ \ | || | | | |_) |
 |  _  |/ ___ \ ___) |  _  || |  \ V / ___ \| || |_| |  _ < 
 |_| |_/_/   \_\____/|_| |_|___|  \_/_/   \_\_| \___/|_| \_\
-""")    
+""")      #HELP MENU
         print(Fore.RESET+Style.BOLD + f"\ndate : {datetime.now()}\r")
         print(Fore.RED+"[1]"+Fore.YELLOW+" Check site directory ")
-        print(Fore.RED + "[2] " + Fore.YELLOW + "Show your ip " + Fore.GREEN + "[ Use vpn ]")
+        print(Fore.RED + "[2] " + Fore.YELLOW + "Check BTC wallet" + Fore.GREEN + "[ Use vpn ]")
         print(Fore.RESET + Fore.RED +"[3] " + Fore.YELLOW + "Password Generator")
         print(Fore.RED + "[4] " + Fore.YELLOW + "Show your Area Number ")
         print(Fore.RED + "[5] " + Fore.YELLOW + "Calculate number")
@@ -51,7 +56,7 @@ while True:
         print("")
         a = input(Fore.CYAN + "Which tools you need: " + Fore.LIGHTMAGENTA_EX)
         print(Fore.RESET)
-        if a == "1":
+        if a == "1": ##DIRECTORY
           try:
            print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
            inp = "https://"+input(Fore.GREEN+"Enter the URL"+Fore.LIGHTRED_EX+" [with out https://] :\n")+'/'
@@ -65,16 +70,25 @@ while True:
 
           except KeyboardInterrupt:
                  exit(Fore.CYAN+"\nGoodBye")
-        elif a == "2":
+        elif a == "2":##BITCOIN CHECK
             print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
             ip = get("https://api.ipify.org").text
             print('\n' + Fore.MAGENTA + ip + Fore.RESET)
             http = get("https://api.ipify.org").text
             cou = location(http)["country"]
             if cou == "IR":
-                print(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + Style.BOLD + "BLOCKED" + Style.END + " from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " + Style.UNDERLINE + Fore.GREEN + cou +"\n\n\n\n"+ Style.END + Fore.RESET)
-                
-        elif a == "3":
+                exit(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + Style.BOLD + "BLOCKED" + Style.END + " from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " + Style.UNDERLINE + Fore.GREEN + cou +"\n\n\n\n"+ Style.END + Fore.RESET)
+            else:
+                 try:
+                  wallet = input(Fore.CYAN+"\nSend your bitcoin wallet address please: \n")
+                  wallet_ceck = get("https://blockchain.com/btc/address"+wallet)
+                  if wallet_ceck.status_code == 200:
+                    print(f"Your wallet address is correct :\n {Wallet}")
+                  else:
+                    print(Fore.RED+"wrong Wallet") 
+                 except KeyboardInterrupt:
+                    print(Fore.CYAN+"GoodBye")                    
+        elif a == "3":#PASSWORD CRACKER
             try:
                 print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
                 length = int(input("Enter length of password: "))
@@ -89,15 +103,15 @@ while True:
             elif ok == True:
                 password = "".join(sample(all,length))
                 print(Fore.GREEN + "\n\n\nYour pass is: " + Fore.YELLOW + "|--> " +Fore.CYAN+password + Fore.YELLOW + " <--|\n\n\n\n\n" + Fore.GREEN)
-            pass
-        elif a == "4":
+            pass 
+        elif a == "4": #AREA NUMBER
             print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
             numbers = input(Fore.LIGHTGREEN_EX+"Enter Number\t \nWith code area(+98):\n")
             print(Fore.LIGHTYELLOW_EX+"this number country name is ")
             ph_number = parse(numbers)
             print(geocoder.description_for_number(ph_number,"fa"))
             print("\n\n\n")
-        elif a == "5":
+        elif a == "5": #CALCULATER
             print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
             num_1 = int(input("Send first number to calc: "))
             num_2 = int(input("Send second number to calc: "))
@@ -126,7 +140,7 @@ while True:
         exit(1)
     else:
         try:
-            if a == "6":
+            if a == "6":#####FUN
                 print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
                 for i in count(2,2):
                     if i == 198618:
