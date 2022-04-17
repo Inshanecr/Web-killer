@@ -22,11 +22,11 @@ class Style:
 
 
  
-def Directory_search():
+def Directory_search(data):
        try:
            print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
            inp = "https://"+input(Fore.GREEN+"Enter the URL"+Fore.LIGHTRED_EX+" [with out https://] :\n")+'/'
-           data = directorylist
+           data = data
            for i in data: 
               h = get(inp+i)
               if h.status_code == 200:
@@ -162,4 +162,4 @@ def Calculator():
         
         
         
-       
+  
