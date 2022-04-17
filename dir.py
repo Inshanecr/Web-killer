@@ -32,7 +32,7 @@ while True:
         a = input(Fore.CYAN + "Which tools you need: " + Fore.LIGHTMAGENTA_EX)
         print(Fore.RESET)   
         if a == "1": ##DIRECTORY
-            Directory_search()
+            Directory_search(data=directorylist)
         elif a == "2":##BITCOIN CHECK
             Bicoin_checker()                         
         elif a == "3":#PASSWORD GENERATOR 
