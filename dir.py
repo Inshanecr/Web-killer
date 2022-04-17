@@ -4,41 +4,66 @@
 #Bug fixes and complements
 #‐-----------------T.me/HASHIVATOR
 
-
 #installing
-from os import system
-print("INSTSLLING  DOCUMENT\n\n\n\n\n\n\n ")
-system("pip install requests")  
-system("pip install phonenumbers")  
-system("pip install ipapi")  
-system("pip install colorama") 
-system("pip install itertools")  
-system("pip install datetime")
-system("clear")
-#libary
+#from os import system
+#print("INSTSLLING  DOCUMENT\n\n\n\n\n\n\n ")
+#system("pip install requests")  
+#system("pip install phonenumbers")  
+#system("pip install ipapi")  
+#system("pip install colorama") 
+#system("pip install itertools")  
+#system("pip install datetime")
+#system("clear")
+#libaries
+try: 
+ from time import sleep
+ from requests import get
+ from ipapi import location
+ from random import sample
+ from colorama import Fore
+ from phonenumbers import geocoder, parse
+ from datetime import datetime
+ from itertools import count
+ from string import ascii_lowercase as l, ascii_uppercase as u, digits as d, punctuation as p
+ from directories import directorylist
+except ImportError:
+        exit(Fore.RED+"please install library \ncommand > python3 -m pip install -r [library]\n"+Fore.YELLOW+"Libraries => "+"pip install requests\npip install phonenumbers\npip install ipapi\npip install colorama\npip install itertools\npip install datetime")
 
-
-from requests import get
-from ipapi import location
-from random import sample
-from colorama import Fore
-from phonenumbers import geocoder, parse
-from datetime import datetime
-from itertools import count
-from string import ascii_lowercase as l, ascii_uppercase as u, digits as d, punctuation as p
-from directories import directorylist
 all = l + u + d + p
 
+#color
 class Style:
     UNDERLINE = '\033[4m'
     BOLD = '\033[1m'
     END = '\033[0m'
     CYAN = '\033[96m'
 
+#HELP MENU
+def Show_menu():
+        print(Fore.RESET+Style.BOLD + f"\ndate : {datetime.now()}\r")
+        sleep(0.1)
+        print(Fore.RED+"[1]"+Fore.YELLOW+" Check site directory ")
+        sleep(0.1)
+        print(Fore.RED + "[2] " + Fore.YELLOW + "Check BTC wallet" + Fore.GREEN + "[ Use vpn ]")
+        sleep(0.1)
+        print(Fore.RESET + Fore.RED +"[3] " + Fore.YELLOW + "Password Generator")
+        sleep(0.1)
+        print(Fore.RED + "[4] " + Fore.YELLOW + "Show your Area Number ")
+        sleep(0.1)
+        print(Fore.RED + "[5] " + Fore.YELLOW + "Calculate number")
+        sleep(0.1)
+        print(Fore.RED + "[6] " + Fore.YELLOW + "Fun")  
+        print("")
+        sleep(0.1)
+        a = input(Fore.CYAN + "Which tools you need: " + Fore.LIGHTMAGENTA_EX)
+        print(Fore.RESET)   
+
+
+
+
+
 ok = True
 while True:
-
-    
     try:
         print(Style.CYAN+"""_   _    _    ____  _   _ _____     ___  _____ ___  ____  
 | | | |  / \  / ___|| | | |_ _\ \   / / \|_   _/ _ \|  _ \ 
@@ -46,16 +71,7 @@ while True:
 |  _  |/ ___ \ ___) |  _  || |  \ V / ___ \| || |_| |  _ < 
 |_| |_/_/   \_\____/|_| |_|___|  \_/_/   \_\_| \___/|_| \_\
 """)      #HELP MENU
-        print(Fore.RESET+Style.BOLD + f"\ndate : {datetime.now()}\r")
-        print(Fore.RED+"[1]"+Fore.YELLOW+" Check site directory ")
-        print(Fore.RED + "[2] " + Fore.YELLOW + "Check BTC wallet" + Fore.GREEN + "[ Use vpn ]")
-        print(Fore.RESET + Fore.RED +"[3] " + Fore.YELLOW + "Password Generator")
-        print(Fore.RED + "[4] " + Fore.YELLOW + "Show your Area Number ")
-        print(Fore.RED + "[5] " + Fore.YELLOW + "Calculate number")
-        print(Fore.RED + "[6] " + Fore.YELLOW + "Fun")  
-        print("")
-        a = input(Fore.CYAN + "Which tools you need: " + Fore.LIGHTMAGENTA_EX)
-        print(Fore.RESET)
+        Show_menu()
         if a == "1": ##DIRECTORY
           try:
            print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
