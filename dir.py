@@ -3,7 +3,6 @@
 #AUTHR T.me/HASHIVATOR
 #Bug fixes and complements
 #‐-----------------T.me/HASHIVATOR
-
 #installing
 from os import system
 #print("INSTSLLING  DOCUMENT\n\n\n\n\n\n\n ")
@@ -24,7 +23,7 @@ try:
  from command import *
 except ImportError:
         exit(Fore.RED+"please install library \ncommand > python3 -m pip install -r [library]\n"+Fore.YELLOW+"Libraries => "+"pip install requests\npip install phonenumbers\npip install ipapi\npip install colorama\npip install itertools\npip install datetime")
-
+After_ip_Click()
 all = l + u + d + p
 while True:
     try:
