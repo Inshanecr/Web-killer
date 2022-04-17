@@ -3,6 +3,8 @@
 #AUTHR T.me/HASHIVATOR
 #Bug fixes and complements
 #‐-----------------T.me/HASHIVATOR
+
+
 #installing
 from os import system
 #print("INSTSLLING  DOCUMENT\n\n\n\n\n\n\n ")
@@ -13,6 +15,8 @@ from os import system
 #system("pip install itertools")  
 #system("pip install datetime")
 #system("clear")
+
+
 #libaries
 system("clear")
 try: 
@@ -25,6 +29,8 @@ except ImportError:
         exit(Fore.RED+"please install library \ncommand > python3 -m pip install -r [library]\n"+Fore.YELLOW+"Libraries => "+"pip install requests\npip install phonenumbers\npip install ipapi\npip install colorama\npip install itertools\npip install datetime")
 After_ip_Click()
 all = l + u + d + p
+
+
 while True:
     try:
         #HELP MENU
@@ -36,7 +42,7 @@ while True:
         elif a == "2":##BITCOIN CHECK
             Bicoin_checker()                         
         elif a == "3":#PASSWORD GENERATOR 
-            Password_generator()
+             Password_generator()
         elif a == "4": #AREA NUMBER
             Area_number()
         elif a == "5": #CALCULATER
