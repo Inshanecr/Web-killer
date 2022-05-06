@@ -42,7 +42,7 @@ while True:
         elif a == "2":##BITCOIN CHECK
             Bicoin_checker()                         
         elif a == "3":#PASSWORD GENERATOR 
-             Password_generator()
+            Password_generator()
         elif a == "4": #AREA NUMBER
             Area_number()
         elif a == "5": #CALCULATER
