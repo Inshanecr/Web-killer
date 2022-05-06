@@ -1,8 +1,7 @@
 #******T.me/PYTHONTE******** 
-#Owner T.me/LooQaat-
-#AUTHR T.me/HASHIVATOR
-#Bug fixes and complements
-#‐-----------------T.me/HASHIVATOR
+#Owner: T.me/LooQaat-
+#Bug fixes:T.me/HASHIVATOR
+#compliments: T.me/LooQaat
 
 
 #installing
