@@ -29,8 +29,7 @@ while True:
     try:
         #HELP MENU
         Show_menu()
-        operator = input(Fore.CYAN + "Which tools you need: " + Fore.LIGHTMAGENTA_EX)
-        print(Fore.RESET)   
+        operator = input(Fore.CYAN + "Which tools you need: " + Fore.LIGHTMAGENTA_EX+Fore.RESET)           
         if operator == "1": ##DIRECTORY
             Directory_search(data=directorylist)
         elif operator == "2":##BITCOIN CHECK
