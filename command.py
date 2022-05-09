@@ -128,15 +128,6 @@ def Area_number():
                   Back_menu()
      
  
-def Install_document():
-    system("pip install random")
-    system("pip install colorama")
-    system("pip install requests")
-    system("pip install ipapi")
-    system("pip install phonenumbers")
-    system("pip install datetime")
-    system("pip install time ")
-
 
 def Calculator():
      try:
