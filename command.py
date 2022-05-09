@@ -58,6 +58,7 @@ def Bicoin_checker():
                     
                  except KeyboardInterrupt:
                     exit(Fore.CYAN+"GoodBye") 
+
 def Password_generator():
             try:
                 print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
@@ -127,6 +128,15 @@ def Area_number():
                   Back_menu()
      
  
+def Install_document():
+    system("pip install random")
+    system("pip install colorama")
+    system("pip install requests")
+    system("pip install ipapi")
+    system("pip install phonenumbers")
+    system("pip install datetime")
+    system("pip install time ")
+
 
 def Calculator():
      try:
