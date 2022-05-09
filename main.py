@@ -13,7 +13,13 @@ try:
  from banner import *
  from command import *
 except ImportError:
-   Install_document()
+    system("pip install random")
+    system("pip install colorama")
+    system("pip install requests")
+    system("pip install ipapi")
+    system("pip install phonenumbers")
+    system("pip install datetime")
+    system("pip install time ")
 
 #After_ip_Click()
 
