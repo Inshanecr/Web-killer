@@ -1,25 +1,17 @@
+#LIBARIES
 from os import system 
-try:
- from time import sleep
- from requests import get,post
- from ipapi import location
- from random import sample
- from colorama import Fore
- from phonenumbers import geocoder, parse
- from datetime import datetime
- from banner import *
- from itertools import count
- from string import ascii_lowercase as l, ascii_uppercase as u, digits as d, punctuation as p
-except ImportError:
-    system("pip install random")
-    system("pip install colorama")
-    system("pip install requests")
-    system("pip install ipapi")
-    system("pip install phonenumbers")
-    system("pip install datetime")
-    system("pip install time ")
-    exit("document has been installed Please run script again")
- 
+from time import sleep
+from requests import get,post
+from ipapi import location
+from random import sample
+from colorama import Fore
+from phonenumbers import geocoder, parse
+from datetime import datetime
+from banner import *
+from itertools import count
+from string import ascii_lowercase as l, ascii_uppercase as u, digits as d, punctuation as p 
+
+
 all = l + u + d + p
 #color
 class Style:
