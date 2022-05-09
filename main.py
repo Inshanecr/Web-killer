@@ -26,9 +26,8 @@ try:
  from command import *
 except ImportError:
      system("pip install colorama")
-     system("clear")
-     system("python main.py")
-After_ip_Click()
+     exit("document has been installed Please run again")  
+#After_ip_Click()
 all = l + u + d + p
 
 
