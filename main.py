@@ -1,6 +1,6 @@
-#                 ******T.me/PYTHONTE******** 
-#             Owner & compliments : T.me/LooQaat
-#Bug fixes:T.me/HASHIVATOR  ||github.com/Hashivator
+#              *****T.me/PYTHONTE****** 
+#          Owner & compliments : T.me/LooQaat
+#  Bug fixes:T.me/HASHIVATOR  ||github.com/Hashivator
 
 #libaries
 from os import system
