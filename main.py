@@ -13,8 +13,7 @@ try:
  from banner import *
  from command import *
 except ImportError:
-     system("pip install colorama")
-     exit("document has been installed Please run script again")  
+   Install_document()
 
 #After_ip_Click()
 
