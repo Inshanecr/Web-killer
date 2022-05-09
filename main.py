@@ -3,20 +3,8 @@
 #Bug fixes:T.me/HASHIVATOR
 #compliments: T.me/LooQaat
 
-
-#installing
-from os import system
-#print("INSTSLLING  DOCUMENT\n\n\n\n\n\n\n ")
-#system("pip install requests")  
-#system("pip install phonenumbers")  
-#system("pip install ipapi")  
-#system("pip install colorama") 
-#system("pip install itertools")  
-#system("pip install datetime")
-#system("clear")
-
-
 #libaries
+from os import system
 system("clear")
 try: 
  from colorama import Fore
@@ -26,8 +14,10 @@ try:
  from command import *
 except ImportError:
      system("pip install colorama")
-     exit("document has been installed Please run again")  
+     exit("document has been installed Please run script again")  
+
 #After_ip_Click()
+
 all = l + u + d + p
 
 
