@@ -13,7 +13,7 @@ try:
  from banner import *
  from command import *
 except ImportError:
-    print("waiting for installing libaries")
+    print("waiting for installing libaries ...\n\n")
     system("pip install random")
     system("pip install colorama")
     system("pip install requests")
@@ -22,10 +22,9 @@ except ImportError:
     system("pip install datetime")
     system("pip install time ")
     system("clear")
+
 #After_ip_Click()
-
 all = l + u + d + p
-
 
 while True:
     try:
