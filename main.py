@@ -20,7 +20,7 @@ except ImportError:
     system("pip install phonenumbers")
     system("pip install datetime")
     system("pip install time ")
-    exit("\n\nPLEASE RUN THE SCRIPT AGAIN")
+    system("clear")
 #After_ip_Click()
 
 all = l + u + d + p
