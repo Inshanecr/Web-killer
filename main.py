@@ -13,6 +13,7 @@ try:
  from banner import *
  from command import *
 except ImportError:
+    print("waiting for installing libaries")
     system("pip install random")
     system("pip install colorama")
     system("pip install requests")
