@@ -29,17 +29,17 @@ while True:
     try:
         #HELP MENU
         Show_menu()
-        a = input(Fore.CYAN + "Which tools you need: " + Fore.LIGHTMAGENTA_EX)
+        operator = input(Fore.CYAN + "Which tools you need: " + Fore.LIGHTMAGENTA_EX)
         print(Fore.RESET)   
-        if a == "1": ##DIRECTORY
+        if operator == "1": ##DIRECTORY
             Directory_search(data=directorylist)
-        elif a == "2":##BITCOIN CHECK
+        elif operator == "2":##BITCOIN CHECK
             Bicoin_checker()                         
-        elif a == "3":#PASSWORD GENERATOR 
+        elif operator == "3":#PASSWORD GENERATOR 
             Password_generator()
-        elif a == "4": #AREA NUMBER
+        elif operator == "4": #AREA NUMBER
             Area_number()
-        elif a == "5": #CALCULATER
+        elif operator == "5":
             Calculator()
     except KeyboardInterrupt:
           exit(Fore.CYAN+"GoodBye") 
