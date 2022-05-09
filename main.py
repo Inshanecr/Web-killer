@@ -25,7 +25,7 @@ try:
  from banner import *
  from command import *
 except ImportError:
-        exit("please install library \ncommand > python3 -m pip install -r [library]\nLibraries => pip install requests\npip install phonenumbers\npip install ipapi\npip install colorama\npip install itertools\npip install datetime")
+        exit("please install library \ncommand > python3 -m pip install -r [library]\nLibraries => pip install colorama\npip install time \npip install datetime")
 After_ip_Click()
 all = l + u + d + p
 
