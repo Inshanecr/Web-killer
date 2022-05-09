@@ -11,7 +11,14 @@ try:
  from itertools import count
  from string import ascii_lowercase as l, ascii_uppercase as u, digits as d, punctuation as p
 except ImportError:
-     exit("please install library \ncommand > python3 -m pip install -r [library]\nLibraries => pip install requests\npip install phonenumbers\npip install ipapi\npip install colorama\npip install itertools\npip install datetime")
+    system("pip install random")
+    system("pip install colorama")
+    system("pip install requests")
+    system("pip install ipapi")
+    system("pip install phonenumbers")
+    system("pip install datetime")
+    system("pip install time ") 
+ 
 all = l + u + d + p
 #color
 class Style:
