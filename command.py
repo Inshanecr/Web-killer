@@ -17,7 +17,8 @@ except ImportError:
     system("pip install ipapi")
     system("pip install phonenumbers")
     system("pip install datetime")
-    system("pip install time ") 
+    system("pip install time ")
+    exit("document has been installed Please run script again")
  
 all = l + u + d + p
 #color
