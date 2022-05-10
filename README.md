@@ -1,2 +1,2 @@
 
-directory bruteforce       check your bitcoin wallet
+directory bruteforce  && check your bitcoin wallet
