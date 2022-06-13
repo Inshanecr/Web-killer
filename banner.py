@@ -27,6 +27,9 @@ def Show_menu():
         
 def Back_menu():
     sleep(1)
-    print(Fore.GREEN+"\n[+] Waiting for to going to back menu .....")
-    sleep(3)
+    data = input(Fore.GREEN+"\n[+] Do You Want To Back menu ?")
+    if data.lower() == "y":
+        pass
+    else:
+      exit()
     system("clear")
