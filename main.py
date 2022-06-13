@@ -34,9 +34,7 @@ while True:
             Bicoin_checker()                         
         elif operator == "3":#PASSWORD GENERATOR 
             Password_generator()
-        elif operator == "4": #AREA NUMBER
-            Area_number()
-        elif operator == "5":
+        elif operator == "4":
             Calculator()
     except KeyboardInterrupt:
           exit(Fore.CYAN+"GoodBye") 
