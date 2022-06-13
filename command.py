@@ -30,6 +30,7 @@ def Directory_search(data):
                  print(Fore.GREEN+"[ + ]"+inp+i)
               else:
                  print (Fore.RED+"[!] "+inp+i)
+              Back_menu()
        except Exception as Ex:
                print(Fore.RED+"[-]"+Fore.YELLOW+"Your URL ISN'T CORRECT\n")
                
@@ -54,8 +55,8 @@ def Bicoin_checker():
                   else:
                     print(Fore.RED+"\n[-]wrong Wallet ! ! !\n") 
                     sleep(1)
-                    
-                    
+                  Back_menu()
+                 
                  except KeyboardInterrupt:
                     exit(Fore.CYAN+"GoodBye") 
 
@@ -65,7 +66,7 @@ def Password_generator():
                 length = int(input("Enter length of password: "))
             except ValueError:
                 print("Length can't be string or float or empty ...")
-                
+                Sleep(2)  
             ok = True
             if length < 5 or length > 120:
                 print("Password length must be between 8 and 100!\n")
@@ -75,20 +76,10 @@ def Password_generator():
             elif ok == True:
                     password = "".join(sample(all,length))
                     print(Fore.GREEN + "\n\nYour pass is: " + Fore.YELLOW + "|--> " +Fore.CYAN+password + Fore.YELLOW + " <--|\n" + Fore.GREEN)
-                    
+                    Back_menu()    
                               
 
-def Area_number():
-         try: 
-            print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
-            numbers = input(Fore.LIGHTGREEN_EX+"Enter Number\t \nWith code area(+98):\n")         
-            
-         except Exception as Ex:
-                  print(Ex)
-                  sleep(5)
-                  print(Fore.RED+"\n\n[-] YOUR NUMBER ISN'T CORRECT ! ! ! ! !\n")
-                  
-     
+
  
 
 def Calculator():
@@ -116,7 +107,7 @@ def Calculator():
                 print(Fore.YELLOW+"\n\nYour answer :")
                 print(num_1 / num_2)
                 print("\n")
-                
+             Back_menu()
      except ZeroDivisionError:
         print(Fore.RED+"You can't division by zero ".upper())
         
