@@ -13,13 +13,10 @@ try:
  from command import *
 except ImportError:
     print("waiting for installing libaries ...\n\n")
-    system("pip install random")
     system("pip install colorama")
     system("pip install requests")
     system("pip install ipapi")
     system("pip install phonenumbers")
-    system("pip install datetime")
-    system("pip install time ")
     exit("please run script again")
 
 #After_ip_Click()
@@ -28,7 +25,8 @@ all = l + u + d + p
 while True:
     try:
         #HELP MENU
-        Show_menu()
+        system("clear")
+        Show_menu()      
         operator = input(Fore.CYAN + "Which tools you need: " + Fore.LIGHTMAGENTA_EX+Fore.RESET)           
         if operator == "1": ##DIRECTORY
             Directory_search(data=directorylist)
