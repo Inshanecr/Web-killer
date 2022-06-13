@@ -17,9 +17,7 @@ def Show_menu():
         sleep(0.1)
         print(Fore.RESET + Fore.RED +"[3] " + Fore.YELLOW + "Password Generator")
         sleep(0.1)
-        print(Fore.RED + "[4] " + Fore.YELLOW + "Show your Area Number ")
-        sleep(0.1)
-        print(Fore.RED + "[5] " + Fore.YELLOW + "Calculate number")
+        print(Fore.RED + "[4] " + Fore.YELLOW + "Calculate number")
         print("")
         sleep(0.1)
         
