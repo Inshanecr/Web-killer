@@ -31,5 +31,4 @@ def Back_menu():
     if data.lower() == "y":
         pass
     else:
-      exit()
-    system("clear")
+      exit(Fore.CYAN+"GoodBye")
