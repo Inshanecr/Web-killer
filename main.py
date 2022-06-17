@@ -2,9 +2,8 @@
 #          Owner & compliments : T.me/LooQaat
 #  Bug fixes:T.me/HASHIVATOR  ||github.com/Hashivator
 
-#libaries
+
 from os import system
-system("clear")
 try: 
  from colorama import Fore
  from string import ascii_lowercase as l, ascii_uppercase as u, digits as d, punctuation as p
@@ -12,12 +11,7 @@ try:
  from banner import *
  from command import *
 except ImportError:
-    print("waiting for installing libaries ...\n\n")
-    system("pip install colorama")
-    system("pip install requests")
-    system("pip install ipapi")
-    system("pip install phonenumbers")
-    exit("please run script again")
+    exit("please run install Libraries\ncommand => python3 -m pip install -r requirements.txt")
 
 #After_ip_Click()
 all = l + u + d + p
@@ -34,9 +28,8 @@ while True:
             Bicoin_checker()                         
         elif operator == "3":#PASSWORD GENERATOR 
             Password_generator()
-        elif operator == "4":
-            Calculator()
+            
     except KeyboardInterrupt:
           exit(Fore.CYAN+"GoodBye") 
-    continue        
+        
    
