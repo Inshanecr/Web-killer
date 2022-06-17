@@ -2,6 +2,8 @@ from colorama import Fore
 from datetime import datetime
 from time import sleep 
 from os import system 
+
+
 def Show_menu():
         print(Fore.CYAN+"""_   _    _    ____  _   _ _____     ___  _____ ___  ____  
 | | | |  / \  / ___|| | | |_ _\ \   / / \|_   _/ _ \|  _ \ 
@@ -17,11 +19,6 @@ def Show_menu():
         sleep(0.1)
         print(Fore.RESET + Fore.RED +"[3] " + Fore.YELLOW + "Password Generator")
         sleep(0.1)
-        print(Fore.RED + "[4] " + Fore.YELLOW + "Calculate number")
-        print("")
-        sleep(0.1)
-        
-        
         
 def Back_menu():
     sleep(1)
