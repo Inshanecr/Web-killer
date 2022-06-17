@@ -13,11 +13,6 @@ from string import ascii_lowercase as l, ascii_uppercase as u, digits as d, punc
 
 
 all = l + u + d + p
-#color
-class Style:
-    BOLD = '\033[1m'
-    END = '\033[0m'
-    CYAN = '\033[96m'
 
 def Directory_search(data):
        try:
@@ -44,21 +39,17 @@ def Bicoin_checker():
             http = get("https://api.ipify.org").text
             cou = location(http)["country"]
             if cou == "IR":
-                exit(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + Style.BOLD + "BLOCKED" + Style.END + " from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " +Fore.GREEN + cou +"\n\n\n\n"+ Style.END + Fore.RESET)
+                exit(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + "BLOCKED from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " +Fore.GREEN + cou +"\n\n\n\n"+Fore.RESET)
             else:
-                 try:
-                  wallet = input(Fore.CYAN+"\nSend your bitcoin wallet address please: \n")
-                  wallet_ceck = get("https://blockchain.com/btc/address"+wallet)
-                  if wallet_ceck.status_code == 200:
-                    print(f"Your wallet address is correct :\n {Wallet}\n")
-                    
-                  else:
+                wallet = input(Fore.CYAN+"\nSend your bitcoin wallet address please: \n")
+                wallet_ceck = get("https://blockchain.com/btc/address"+wallet)
+                if wallet_ceck.status_code == 200:
+                   print(f"Your wallet address is correct :\n {Wallet}\n")
+                else:
                     print(Fore.RED+"\n[-]wrong Wallet ! ! !\n") 
                     sleep(1)
-                  Back_menu()
+                Back_menu()
                  
-                 except KeyboardInterrupt:
-                    exit(Fore.CYAN+"GoodBye") 
 
 def Password_generator():
   while True:
@@ -72,10 +63,7 @@ def Password_generator():
     if length < 5 or length > 120:
         print(Fore.RED+"\n[ * ] Password length must be between 8 and 100!\n")
         sleep(4)
-        break
-        ok = False
-                
-            # and try again
+        break             
     elif ok == True:
         password = "".join(sample(all,length))
         print(Fore.GREEN + "\n\nYour pass is: " + Fore.YELLOW + "|--> " +Fore.CYAN+password + Fore.YELLOW + " <--|\n" + Fore.GREEN)
