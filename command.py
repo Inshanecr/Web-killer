@@ -61,57 +61,23 @@ def Bicoin_checker():
                     exit(Fore.CYAN+"GoodBye") 
 
 def Password_generator():
-            try:
-                print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
-                length = int(input("Enter length of password: "))
-            except ValueError:
-                print("Length can't be string or float or empty ...")
-                Sleep(2)  
-            ok = True
-            if length < 5 or length > 120:
-                print("Password length must be between 8 and 100!\n")
-                ok = False
+  while True:
+    try:
+         print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
+         length = int(input("Enter length of password: "))   
+    except ValueError:
+        print("Length can't be string or float or empty ...")   
+        sleep(5)        
+    ok = True
+    if length < 5 or length > 120:
+        print(Fore.RED+"\n[ * ] Password length must be between 8 and 100!\n")
+        sleep(4)
+        break
+        ok = False
                 
-                # and try again
-            elif ok == True:
-                    password = "".join(sample(all,length))
-                    print(Fore.GREEN + "\n\nYour pass is: " + Fore.YELLOW + "|--> " +Fore.CYAN+password + Fore.YELLOW + " <--|\n" + Fore.GREEN)
-                    Back_menu()    
-                              
-
-
- 
-
-def Calculator():
-     try:
-            print("-----T.ME/HASHIVATOR----T.me/LooQaat------")
-            num_1 = int(input("Send first number to calc: "))
-            num_2 = int(input("Send second number to calc: "))
-            action = input(Fore.GREEN+"Which one:"+Fore.CYAN+" *  +  /  - : ")
-            if action == "+":
-                print(Fore.LIGHTYELLOW_EX+"\n\nYour answer : ")
-                print(num_1 + num_2)
-                print("\n")
-                
-            elif action == "-":
-                print(Fore.YELLOW+"\n\nYour answer : ")
-                print(num_1 - num_2)
-                print("\n")
-                
-            elif action == "*":
-                print(Fore.YELLOW+"\n\nYour answer : ")
-                print(num_1 * num_2)
-                print("\n")
-                
-            elif action == "/":
-                print(Fore.YELLOW+"\n\nYour answer :")
-                print(num_1 / num_2)
-                print("\n")
-            Back_menu()
-     except ZeroDivisionError:
-        print(Fore.RED+"You can't division by zero ".upper())
-        
-     except KeyboardInterrupt:
-        print("",flush=True)
-        exit("GoodBye!",flush=True)
-        exit(1)
+            # and try again
+    elif ok == True:
+        password = "".join(sample(all,length))
+        print(Fore.GREEN + "\n\nYour pass is: " + Fore.YELLOW + "|--> " +Fore.CYAN+password + Fore.YELLOW + " <--|\n" + Fore.GREEN)
+        Back_menu()    
+                                     
