@@ -11,42 +11,41 @@ from urllib3 import PoolManager
 manager = PoolManager()
 
 
-def check_clear_log_file(path_check_file=""):
-   with open(f"log/{path_check_file}.log","w+") as clear_log:
+def setting(url="",path_check_file="",status=""):
+    if status == "clear":
+      with open(f"log/{path_check_file}.log","w+") as clear_log:
        clear_log.write("")
-
-def User_Valid(url):
-        if url == "":
-           print(Fore.RED+"\nplease Enter Url")
-           sleep(1)
-           return "continue"
-       # elif not "https://" or "http://" in url:
-          #   print(c.pink+"\n please Write URL  With out https:// ")
-          #   sleep(2)
-       #      return "continue"  
-
-           
-def continue_process():
-            nun = input(c.green+"\nDo You Want To Back menu > Y/N :").upper()
-            if nun == "Y":
-                  return "break"
-            else:
-                  pass
-  
+    elif status == "continue_process":
+        nun = input(c.green+"\nDo You Want To Back menu > Y/N :").upper()
+        if nun == "Y":
+            return "break"
+        else:
+             pass
+    elif status == "User_Valid":
+      if url == "":
+        print(Fore.RED+"\nplease Enter Url")
+        sleep(1)
+        return "continue"
+        
+        
+        
 def Directory_search(status="",msg="",path_log="",banner_name=""):
       try:
        while True:
            clear()
+           
            banner.Dir_Option_banner(method_name=banner_name)
            print("\n               -----T.ME/HASHIVATOR || T.me/LooQaat------\n")
            sleep(0.5)
-           check_clear_log_file(path_check_file=path_log)
+           
+           setting(status="clear",path_check_file=path_log)
+           
            print(c.yellow+f"\n             [ ▪︎ ] Please wait\nwhile all the results are saved in > log/{path_log}.log \n         This will take a {msg}\n"+c.re)
            
            
            url= "https://"+input(Fore.GREEN+"\nEnter the URL"+Fore.LIGHTRED_EX+" [with out https://] : "+c.pink).lower()+"/"
            
-           valid = User_Valid(url=url)
+           valid = setting(status="User_Valid",url=url)
            if valid == "continue":
                continue
                    
@@ -79,15 +78,14 @@ def Directory_search(status="",msg="",path_log="",banner_name=""):
                       
            print(c.lcyan+"\n[ * ] Please check result in Dir/result.log ")
            
-           if_exit = continue_process()
+           if_exit = continue_process(status="continue_process")
            if if_exit == "break":
               break
 
              
       except Exception as Ex:
-               print(Ex)
-               sleep(10)
                print(Fore.RED+"[-]"+Fore.YELLOW+"Your URL ISN'T CORRECT\n")
+               sleep(2)
                
       except KeyboardInterrupt:
                exit(Fore.CYAN+"\nGoodBye")
@@ -104,7 +102,7 @@ def Bicoin_checker():
                 else:
                     print(Fore.RED+"\n[ - ] wrong Wallet ! ! !\n") 
                     sleep(1)
-                if_exit = continue_process()
+                if_exit = setting(status="continue_process")
                 if if_exit == "break":
                     break
                   
@@ -138,70 +136,82 @@ def ip_info():
 
 
 def HttpHeader():
-        while True:
-          try:
+        try:
+            while True:
+            
                 clear()
                 banner.network_banner(method_name="http")
                 print(Fore.LIGHTRED_EX+" [ - ] Enter The Domain\n")
                 inp = banner.terminal_logo("Network/Header")    
-                
-                Valid_Url = User_Valid(url=inp)
-                if Valid_Url == "continue":
+                valid = setting(status="User_Valid",url=inp)
+                if valid == "continue":
                    continue
+                   
                 else:
                   result = get('https://api.hackertarget.com/httpheaders/?q=' + inp).text
                   print(c.pink+"Your result  > ")
                   print("\n"+Fore.LIGHTBLUE_EX+result)
                   sleep(1)
-                  if_exit = continue_process()
+                  
+                  if_exit = setting(status="continue_process")
                   if if_exit == "break":
-                     break
-          except KeyboardInterrupt:
+                    break
+                  
+                  
+        except KeyboardInterrupt:
             exit(Fore.CYAN+"\nGoodBye :)")
             
             
 def ShareDns():
+    try:
        while True:
-           try:
+       
                 clear()
                 banner.network_banner(method_name="shareDns")
                 print(Fore.RED+"\n [ ! ] Plase Enter IP/Domain "+c.yellow+"[with out https://]: \n")
                 #command banner
                 inp = banner.terminal_logo("Network/ShareDns")
                 
-                Valid_Url = User_Valid(url=inp)
-                if Valid_Url == "continue":
-                   continue
+                valid = setting(status="User_Valid",url=inp)
+                if valid == "continue":
+                  continue
+                   
                 else:   
                   result =get('https://api.hackertarget.com/findshareddns/?q=' + inp).text
                   print("\n"+Fore.LIGHTBLUE_EX+result) 
                   sleep(1)
-                  if_exit = continue_process()
+                  if_exit = setting(status="continue_process")
                   if if_exit == "break":
-                     break
-           except KeyboardInterrupt:
-            exit(Fore.CYAN+"\nGoodBye :)")
+                    break
+                  
+                  
+    except KeyboardInterrupt:
+        exit(Fore.CYAN+"\nGoodBye :)")
 
 
 ### DNS LOOK UP
 def DnsLookUp():
+    try:
         while True:
-           try:
+        
                 clear()
                 banner.network_banner(method_name="DnsLookUp")
                 print(Fore.RED+" [!] Enter The Domain\n"+c.yellow+"[with out https://]: ")
                 #command banner
                 inp = banner.terminal_logo("Network/DnsLookUp") 
                 
-                Valid_Url = User_Valid(url=inp)
-                if Valid_Url == "continue":
-                   continue
+                valid = setting(status="User_Valid",url=inp)
+                if valid == "continue":
+                    continue
+                   
                 else:
                   result = get('http://api.hackertarget.com/dnslookup/?q=' + inp).text
                   print("\n"+Fore.LIGHTBLUE_EX+result)
                   sleep(1) 
-                  if_exit = continue_process()
+                  if_exit = setting(status="continue_process")
                   if if_exit == "break":
-                    break
-           except KeyboardInterrupt:
-            exit(Fore.CYAN+"\nGoodBye :)")
+                      break
+                   
+                  
+    except KeyboardInterrupt:
+        exit(Fore.CYAN+"\nGoodBye :)")
