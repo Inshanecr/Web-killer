@@ -1,8 +1,13 @@
-from lib.check import *
 from lib.colors import c
-from time import sleep
-from lib import lib 
-from lib import *
+from time import sleep 
+from lib import check,banner,lib
+
+red = c.red
+g = c.green
+ye = c.yellow
+cy = c.cyan
+b = c.blue
+
 def network_option():
   while True:
     check.clear()
@@ -22,30 +27,23 @@ def network_option():
       
         
 def Developer():
-  clear()
-  red = c.red
-  g = c.green
-  ye = c.yellow
-  cy = c.cyan
-  b = c.blue
-  ban =(f"""{cy}
+    check.clear()
+    ban =(f"""{cy}
          _   _               _                       _              
         ( ) ( )             ( )     _               ( )_            
-        | |_| |   _ _   ___ | |__  (_) _   _    _ _ | ,_)   _    _       __
+        | |_| |   _ _   ___ | |__  (_) _   _    _ _ | ,_)   _    ___
         |  _  | /'_` )/',__)|  _ `\| |( ) ( ) /'_` )| |   /'_`\ ( '__)
         | | | |( (_| |\__, \| | | || || \_/ |( (_| || |_ ( (_) )| | 
         (_) (_)`\__,_)(____/(_) (_)(_)`\___/'`\__,_)`\__)`\___/'(_) 
 
-        {red}[•]{g} Develpers :{ye} 𝙷𝚊𝚜𝚑𝚒𝚟𝚊𝚝𝚘𝚛 𝚃𝚎𝚊𝚖
+{red}[•]{g} Develpers :{ye} 𝙷𝚊𝚜𝚑𝚒𝚟𝚊𝚝𝚘𝚛 𝚃𝚎𝚊𝚖
 
-        {red}[•]{g} 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 :{ye} 𝚃.𝚖𝚎/𝙷𝚊𝚜𝚑𝚒𝚟𝚊𝚝𝚘𝚛{b} |{ye} 𝚃.𝚖𝚎/𝙻𝚘𝚘𝚀𝚊𝚊𝚝
+{red}[•]{g} 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 :{ye} 𝚃.𝚖𝚎/𝙷𝚊𝚜𝚑𝚒𝚟𝚊𝚝𝚘𝚛{b} |{ye} 𝚃.𝚖𝚎/𝙻𝚘𝚘𝚀𝚊𝚊𝚝
 
-        {red}[•]{g} 𝚌𝚑𝚊𝚗𝚗𝚎𝚕 :{ye} 𝚃.𝚖𝚎/𝚙𝚢𝚝𝚑𝚘𝚗𝚝𝚎
+{red}[•]{g} 𝚌𝚑𝚊𝚗𝚗𝚎𝚕 :{ye} 𝚃.𝚖𝚎/𝚙𝚢𝚝𝚑𝚘𝚗𝚝𝚎
   """)
-  for line in ban.split("\n"):
-    sleep(0.1)
-    print(line)
-  input(c.cyan+"\n        [ ○ ] Press Enter To Return Menu ")
+    banner.print_slow(banner=ban)
+    input(c.cyan+"\n        [ ○ ] Press Enter To Return Menu ")
 
 
 
