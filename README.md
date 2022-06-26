@@ -15,7 +15,8 @@
 </p>
 
 ![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/Screenshot_20220627-001359-1-1.jpg)
-
+![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/dir.jpg)
+![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/Network.jpg)
 ### Features:
 
 - Directory Brute Force
@@ -36,10 +37,10 @@
 
 
 ```bash
-$ git clone https://github.com/Inshanecr/Web-Breaker
-$ cd Storm-Breaker
+$ git clone https://github.com/Inshanecr/Web-killer
+$ cd Web-killer
 $ python3 -m pip install -r requirements.txt
-$ python3 st.py
+$ python3 main.py
 ```
 
 ## My Telegram
