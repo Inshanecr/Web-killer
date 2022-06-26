@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/ultrasecurity/Web-killer"><img src="https://github.com/Inshanecr/Web-killer/tree/main/lib/image/Screenshot_20220627-001359-1-1.jpg" alt="WebKiller"></a>
+  <a href="https://github.com/inshanecr/Web-killer"><img src="https://github.com/Inshanecr/Web-killer/blob/main/lib/image/Screenshot_20220627-001359-1-1.jpg" alt="WebKiller"></a>
 
 </h1>
 
@@ -17,7 +17,7 @@
   </a>
 </p>
 
-![demo](https://github.com/ultrasecurity/Web-killer)
+![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/Screenshot_20220627-001359-1-1.jpg)
 
 ### Features:
 
