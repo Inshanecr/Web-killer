@@ -13,7 +13,7 @@
   </a>
 
   <a href="https://www.microsoft.com/de-de/">
-    <img src="https://img.shields.io/badge/platform-Linux-red">
+    <img src="https://img.shields.io/badge/platform-Linux-windows-red">
   </a>
 </p>
 
