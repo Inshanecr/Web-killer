@@ -12,9 +12,6 @@
   </a>
   </a>
 
-  <a href="https://www.microsoft.com/de-de/">
-    <img src="https://img.shields.io/badge/platform-Linux-windows-red">
-  </a>
 </p>
 
 ![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/Screenshot_20220627-001359-1-1.jpg)
