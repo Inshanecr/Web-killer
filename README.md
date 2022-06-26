@@ -1,8 +1,8 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/inshanecr/Web-killer"><img src="https://github.com/Inshanecr/Web-killer/blob/main/lib/image/Screenshot_20220627-001359-1-1.jpg" alt="WebKiller"></a>
-
-</h1>
+  <h1>
+   TOOLS
+  </h1>
 <p align="center">
   <a href="http://python.org">
     <img src="https://img.shields.io/badge/python-v3-blue">
