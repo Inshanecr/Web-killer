@@ -195,5 +195,4 @@ def bitcoin_check_banner():
 |B|i|t|c|o|i|n| |w|a|l|l|e|t| |c|h|e|c|k|e|r|
 +-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
   """)
-  print_slow(banner=banner)
-  
+  print_slow(banner=banner) 
