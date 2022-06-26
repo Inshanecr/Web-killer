@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/ultrasecurity/Web-killer"><img src="https://github.com/Inshanecr/Web-killer/tree/main/lib/image/Screenshot_20220627-001359-1-1.jpg" alt="Darkside"></a>
+  <a href="https://github.com/ultrasecurity/Web-killer"><img src="https://github.com/Inshanecr/Web-killer/tree/main/lib/image/Screenshot_20220627-001359-1-1.jpg" alt="WebKiller"></a>
 
 </h1>
 
@@ -17,22 +17,14 @@
   </a>
 </p>
 
-![demo](https://github.com/Inshanecr/StormBreaker/blob/main/IMG_20220521_205527_797.jpg)
+![demo](https://github.com/ultrasecurity/Web-killer)
 
 ### Features:
 
-- Access Location [AdvanceTheme]
-- Access Webcam
-- Access Microphone
-
-
-
-### Update Log:
-- Second(latest) Update in  June 17, 2022
-- The overall structure of the tool is programmed from scratch
-- Previous versions bugs fixed
-- Use random Port for localhost
-> We have deleted ngrok in the new version of storm breaker and entrusted the user with run and share the localhost. So please note that storm breaker runs a localhost for you and you have to start the ssh on your intended port yourself.
+- Directory Brute Force
+- Network Tools 
+- Hash 
+- Bictoin checker
 
 
 
