@@ -1,12 +1,11 @@
 #              *****T.me/PYTHONTE****** 
 #          Owner & compliments : T.me/LooQaat
-#  Bug fixes:T.me/HASHIVATOR  ||github.com/Hashivator
 
 from os import system
-from lib import handler,lib
 from lib.check import *
-check_dependency()
+check_ip()
 check_update()
+from lib import handler,lib
 from colorama import Fore
 from lib.banner import *
 from lib.colors import c
