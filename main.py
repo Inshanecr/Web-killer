@@ -6,7 +6,6 @@ from lib.check import *
 check_ip()
 check_update()
 from lib import handler,lib
-from colorama import Fore
 from lib.banner import *
 from lib.colors import c
 
@@ -19,15 +18,15 @@ while True:
         operator = input(c.red+" ┌─["+c.lcyan+"Web-Killer"+c.re+"~"+c.lgreen+"@HOME"+c.red+"""]
  └──╼ """+c.green+"$ "+c.pink)             
         if operator == "1": ##DIRECTORY
-            handler.directory_Option()
+             handler.directory_Option()
         elif operator == "2":##BITCOIN CHECK
-            lib.Bicoin_checker()
+             lib.Bicoin_checker()
         elif operator == "3": 
              handler.network_option()
         elif operator == "9": 
              handler.Developer()
         elif operator == "10": 
-            exit(Fore.CYAN+"GoodBye")    
+             exit(Fore.CYAN+"GoodBye")    
     except KeyboardInterrupt:
           exit(Fore.CYAN+"GoodBye") 
         
