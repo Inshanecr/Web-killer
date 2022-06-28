@@ -28,7 +28,7 @@
 
 - Kali Linux 2022
 - Windows 11,10,8
-- alpine
+- Alpine Linux
 
 ### Installation On Kali Linux
 
