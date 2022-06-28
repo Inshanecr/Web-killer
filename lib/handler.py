@@ -49,7 +49,7 @@ def Developer():
 
 def directory_Option():
  while True:
-    clear()
+    check.clear()
     banner.Dir_Option_banner(method_name="main")
     banner.directory_banner()
     result = banner.terminal_logo("Directory")
