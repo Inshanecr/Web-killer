@@ -11,9 +11,9 @@
 
 </p>
 
-![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/Screenshot_20230214-231842_Termius.jpg)
-![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/dir.jpg)
-![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/Network.jpg)
+$![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/Screenshot_20230214-231842_Termius.jpg)
+#![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/dir.jpg)
+#![demo](https://github.com/Inshanecr/Web-killer/blob/main/lib/image/Network.jpg)
 ### Features:
 
 - Directory Brute Force
